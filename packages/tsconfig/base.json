@@ -1,0 +1,37 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Default tsconfig",
+	"compilerOptions": {
+		"composite": false,
+		"declaration": false,
+		"declarationMap": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"inlineSources": false,
+		"isolatedModules": true,
+		"lib": ["DOM", "ESNext"],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"noEmit": false,
+		"noEmitOnError": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"outDir": "../../build",
+		"paths": {
+			"*": [
+				"../../apps/*",
+				"../../packages/*"
+			]
+		},
+		"preserveWatchOutput": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"rootDir": "../../",
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ESNext"
+	},
+	"exclude": [
+		"node_modules"
+	]
+}

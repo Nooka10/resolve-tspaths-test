@@ -1,0 +1,38 @@
+{
+	"name": "resolve-tspaths-test",
+	"private": true,
+	"engines": {
+		"node": ">=v18.16.0"
+	},
+	"scripts": {
+		"clean": "turbo run clean && git clean -xdf node_modules",
+		"lint": "turbo run lint",
+		"lint:fix": "turbo run lint:fix",
+		"lint:quiet": "turbo run lint:quiet",
+		"postinstall": "manypkg check && patch-package && husky install"
+	},
+	"dependencies": {
+		"@manypkg/cli": "^0.21.0",
+		"branch-name-lint": "^2.1.1",
+		"eslint": "^8.50.0",
+		"eslint-config-custom": "*",
+		"eslint-plugin-typescript-sort-keys": "^3.0.0",
+		"husky": "^8.0.3",
+		"patch-package": "^8.0.0",
+		"postinstall-postinstall": "^2.1.0",
+		"turbo": "^1.10.13"
+	},
+	"workspaces": {
+		"packages": [
+			"apps/*",
+			"packages/*"
+		]
+	},
+	"overrides": {
+		"react-refresh": "~0.14.0"
+	},
+	"resolutions": {
+		"react-refresh": "~0.14.0"
+	},
+	"packageManager": "yarn@1.22.19"
+}

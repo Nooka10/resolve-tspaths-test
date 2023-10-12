@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Expo tsconfig",
+	"extends": [
+		"./base.json",
+		"expo/tsconfig.base"
+	],
+	"compilerOptions": {
+		"declaration": true,
+		"declarationMap": true
+	},
+	"exclude": [
+		"**/node_modules",
+		"babel.config.js",
+		"metro.config.js",
+		"jest.config.js",
+		"expo-env.d.ts"
+	]
+}

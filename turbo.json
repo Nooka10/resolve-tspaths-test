@@ -1,0 +1,81 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": [
+		"**/.env.*",
+		"**/tsconfig.json"
+	],
+	"globalDotEnv": [
+		"**/.env.*"
+	],
+	"globalEnv": [
+		"ENV"
+	],
+	"pipeline": {
+		"start:dev": {
+			"dotEnv": [
+				"**/.env.development"
+			],
+			"cache": false,
+			"persistent": true
+		},
+		"start:staging": {
+			"dotEnv": [
+				"**/.env.staging"
+			],
+			"cache": false,
+			"persistent": true
+		},
+		"start:production": {
+			"dotEnv": [
+				"**/.env.production"
+			],
+			"cache": false,
+			"persistent": true
+		},
+		"eas:build:development": {},
+		"eas:build:staging": {},
+		"eas:build:production": {},
+		"eas:build:android:development": {},
+		"eas:build:android:staging": {},
+		"eas:build:android:production": {},
+		"eas:build:ios:development": {},
+		"eas:build:ios:staging": {},
+		"eas:build:ios:production": {},
+		"clean": {
+			"dotEnv": [
+				"**/.env.development"
+			],
+			"cache": false
+		},
+		"fix-dependencies": {
+			"dotEnv": [
+				"**/.env.development"
+			],
+			"cache": false
+		},
+		"lint": {
+			"cache": false
+		},
+		"lint:branch": {
+			"cache": false
+		},
+		"lint:fix": {
+			"cache": false
+		},
+		"lint:quiet": {
+			"cache": false
+		},
+		"lint:env:development": {
+			"cache": false
+		},
+		"lint:env:production": {
+			"cache": false
+		},
+		"lint:env:staging": {
+			"cache": false
+		},
+		"typecheck": {
+			"cache": false
+		}
+	}
+}

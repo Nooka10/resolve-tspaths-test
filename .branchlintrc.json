@@ -1,0 +1,15 @@
+{
+	"branchNameLinter": {
+		"prefixes": ["refactor", "fix", "enhancement", "feature"],
+		"seperator": "/",
+		"regex": "[a-z0-9-]$",
+		"skip": [],
+		"banned": ["wip", "main", "staging", "production"],
+		"disallowed": ["main", "staging", "production"],
+		"msgBranchBanned": "Branches with the name \"%s\" are not allowed.",
+		"msgBranchDisallowed": "Pushing to \"%s\" is not allowed.",
+		"msgPrefixNotAllowed": "Branch prefix \"%s\" is not allowed.",
+		"msgPrefixSuggestion": "Instead of \"%s\" try \"%s\".",
+		"msgSeparatorRequired": "Branch \"%s\" must contain a separator \"%s\"."
+	}
+}
